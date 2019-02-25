@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1551049168109.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "5A229DDD",
+    "lastKnownWriteTime" : 1551059820,
+    "last_content_update" : 1551059820848,
+    "path" : "C:/_desenv/_analises/R/Bball/VersatilePlayers/scripts/graph_line_seasons.R",
+    "project_path" : "scripts/graph_line_seasons.R",
+    "properties" : {
+        "cursorPosition" : "39,9",
+        "scrollLine" : "8",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 11,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

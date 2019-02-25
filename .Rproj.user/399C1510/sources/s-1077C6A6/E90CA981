@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1551059842595.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "E90CA981",
+    "lastKnownWriteTime" : 1551060677,
+    "last_content_update" : 1551064883524,
+    "path" : "C:/_desenv/_analises/R/Bball/VersatilePlayers/scripts/graph_by_exp.R",
+    "project_path" : "scripts/graph_by_exp.R",
+    "properties" : {
+        "cursorPosition" : "38,32",
+        "scrollLine" : "14",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

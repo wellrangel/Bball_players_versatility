@@ -1,0 +1,90 @@
+#heat map
+library(stringr)
+library(sqldf)
+library(ggplot2)
+library(plyr)
+source("scripts/functions.R")
+
+df_cp <- read.csv("outputdata/classified_players.csv", sep=",", stringsAsFactors=FALSE)
+df_cp$exp <- as.numeric(df_cp$exp)
+df_cp <- df_cp[df_cp$Temporada=="NBB 9", ]
+
+#ve_low_exp 1 and 2
+#df_cp <- df_cp[df_cp$exp==1 | df_cp$exp==2 | df_cp$exp==3, ]
+#ve_middle_exp 2 to 5
+#df_cp <- df_cp[df_cp$exp>3 & df_cp$exp < 7, ]
+#ve_middle_exp 6 to 9
+df_cp <- df_cp[df_cp$exp>6, ]
+
+
+round ( (NROW(df_cp[df_cp$type== "Specialist",])/NROW(df_cp) ) * 100 ,2)
+
+round ( (NROW(df_cp[df_cp$type== "Versatile",])/NROW(df_cp) ) * 100 ,2)
+
+
+
+> round ( (NROW(df_cp[df_cp$type== "Specialist",])/NROW(df_cp) ) * 100 ,2)
+[1] 53.03
+> 
+  > round ( (NROW(df_cp[df_cp$type== "Versatile",])/NROW(df_cp) ) * 100 ,2)
+[1] 46.97
+
+round ( (NROW(df_cp[df_cp$type== "Specialist",])/NROW(df_cp) ) * 100 ,2)
+[1] 56.82
+> 
+  > round ( (NROW(df_cp[df_cp$type== "Versatile",])/NROW(df_cp) ) * 100 ,2)
+[1] 43.18
+
+
+> round ( (NROW(df_cp[df_cp$type== "Specialist",])/NROW(df_cp) ) * 100 ,2)
+[1] 48.21
+> 
+  > round ( (NROW(df_cp[df_cp$type== "Versatile",])/NROW(df_cp) ) * 100 ,2)
+[1] 51.79
+> 
+> 
+
+nbb9 <- df_cp[df_cp$Temporada== "NBB 9",]
+
+
+
+ver <- c(
+  round ( (NROW(nbb9[nbb9$type== "Versatile",])/NROW(nbb9) ) * 100 ,2))
+
+
+esp <- c(
+  round ( (NROW(nbb9[nbb9$type== "Specialist",])/NROW(nbb9) ) * 100 ,2))
+
+
+group <- c("2009", "2010", "2011", "2012", "2013(*)", "2014", "2015", "2016(*)", "2017(*)")
+
+df <- data.frame(n_versateis=ver,n_especialistas=esp, group=group)
+#df$perc <- (df$n_versateis/df$n_especialistas) *100
+
+colnames(df)[1] <- "Versatile"
+colnames(df)[2] <- "Specialist"
+
+chart_data <- melt(df, id='group')
+
+chart_data$value<-format(chart_data$value, nsmall = 2) 
+
+
+chart_data$group = as.factor(chart_data$group)
+colnames(chart_data)[2] <- "Classification"
+format(value, nsmall = 2) 
+
+ggplot(data=chart_data, aes(x=group, y=value, group= Classification )) +
+  geom_line(aes(color=Classification) )+
+  geom_point(size =5, aes(color=Classification) ) +
+  ylab("Percent of players") +
+  xlab("Seasons") +
+  theme(axis.text=element_text(size=30),
+        axis.title=element_text(size=40,face="bold"),
+        legend.position="top", legend.title=element_text(size=30), 
+        legend.text=element_text(size=27)
+  ) +
+  geom_text(aes(label=value),size=6, vjust=-.5)
+
+#write.csv(df, "output/anosVvsE.csv")
+
+

@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1551058574860.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "8412FCE5",
+    "lastKnownWriteTime" : 1551059822,
+    "last_content_update" : 1551059822625,
+    "path" : "C:/_desenv/_analises/R/Bball/VersatilePlayers/scripts/graph_all_star.R",
+    "project_path" : "scripts/graph_all_star.R",
+    "properties" : {
+        "cursorPosition" : "158,32",
+        "scrollLine" : "130",
+        "tempName" : "Untitled5"
+    },
+    "relative_order" : 14,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

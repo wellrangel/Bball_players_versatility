@@ -1,0 +1,45 @@
+
+agg_data <- aggregate(jogador~grupoPosicoes+type, data=df_cp, FUN=NROW)
+
+
+
+
+#jogadores jogo das estrelas
+final_jogo_estrelas <- df_cp[df_cp$jogador_apelido == "Marcelinho" |
+                               df_cp$jogador_apelido == "Davi" | 
+                               df_cp$jogador_apelido == "Deryk" |
+                               df_cp$jogador == "Alex Ribeiro Garcia" |
+                               df_cp$jogador_apelido == "Marquinhos" |
+                               df_cp$jogador_apelido == "Giovannoni" |
+                               df_cp$jogador == "Jefferson William Andrade da Silva Antônio" |
+                               df_cp$jogador_apelido == "Olivinha" |
+                               df_cp$jogador_apelido == "Betinho" |
+                               df_cp$jogador == "Lucas Fernandes Mariano" |
+                               df_cp$jogador_apelido == "De Paula" |
+                               df_cp$jogador_apelido == "Fúlvio" |
+                               df_cp$jogador == "Tyrone Denell Curnell" |
+                               df_cp$jogador == "Kendall Lamont Anthony" |
+                               df_cp$jogador_apelido == "Rollins" |
+                               df_cp$jogador_apelido == "Bennett" |
+                               df_cp$jogador_apelido == "Rodgers" |
+                               df_cp$jogador_apelido == "Maynard" |
+                               df_cp$jogador == "Kenny Montrell Dawkins" |
+                               df_cp$jogador_apelido == "Holloway" |
+                               df_cp$jogador_apelido == "Shamell" |
+                               df_cp$jogador_apelido == "Jackson" |
+                               df_cp$jogador_apelido == "Laws" |
+                               df_cp$jogador_apelido == "Hure" |
+                               df_cp$jogador_apelido == "Cafferata"
+                             ,]
+
+
+final_jogo_estrelas <- final_jogo_estrelas[,c( "jogador", "posicao", "equipe", "Ala", "AlaArmador", "AlaPivo", "Armador", "Pivo") ]
+
+write.csv(final_jogo_estrelas, file = "output/final_jogo_estrelas.csv")
+
+temp <- df_cp[df_cp$AlaArmador >.21 & df_cp$Armador > .21  & df_cp$Ala > .21,]
+
+temp <- df_cp[df_cp$posicao != df_cp$predict & df_cp$posicao=="Pivo",]
+nrow(temp)
+temp <- df_cp[df_cp$posicao=="Pivo",]
+nrow(temp)

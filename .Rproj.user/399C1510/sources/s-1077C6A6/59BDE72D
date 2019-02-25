@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1551050137231.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "59BDE72D",
+    "lastKnownWriteTime" : 1551059075,
+    "last_content_update" : 1551059075692,
+    "path" : "C:/_desenv/_analises/R/Bball/VersatilePlayers/scripts/1_AggregateData.R",
+    "project_path" : "scripts/1_AggregateData.R",
+    "properties" : {
+        "cursorPosition" : "28,32",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 13,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1551048220903.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A2A02DFB",
+    "lastKnownWriteTime" : 1551059824,
+    "last_content_update" : 1551059824071,
+    "path" : "C:/_desenv/_analises/R/Bball/VersatilePlayers/scripts/graph_heatmap.R",
+    "project_path" : "scripts/graph_heatmap.R",
+    "properties" : {
+        "cursorPosition" : "36,1",
+        "scrollLine" : "3",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
